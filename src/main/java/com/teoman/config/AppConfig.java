@@ -1,6 +1,7 @@
 package com.teoman.config;
 
-//Beanleri tedarik eder. JwtAuthenticationFilter sınıfının ihtiyaç duyfuğu UserDetailsService ve passwordEncoder burada üretilir.
+//Beanleri tedarik eder.
+// JwtAuthenticationFilter sınıfının ihtiyaç duyfuğu UserDetailsService ve passwordEncoder burada üretilir.
 // SecurityConfig sınıfının ihtiyaç duyduğu authenticationProvider burada üretilir.
 
 import com.teoman.repository.UserAuthRepository;

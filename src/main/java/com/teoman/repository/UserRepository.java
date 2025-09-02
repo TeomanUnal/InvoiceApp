@@ -12,5 +12,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByAuth(UserAuth auth);
 
-
 }

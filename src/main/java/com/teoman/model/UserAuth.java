@@ -11,8 +11,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-// UserDetails metotları: Spring Security'nin kullanıcı kontrolünü sağladığı metotlar.
-
 @Entity
 @Table(name = "_userAuth")
 @Getter

@@ -1,7 +1,5 @@
 package com.teoman.jwt;
 
-//Token üretme ve çözme ve imza süresini kontrol edip tokenın geçerliliğini bildirir. http katmanına karışmaz.
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
