@@ -32,15 +32,13 @@ public class AuthServiceImpl implements AuthService {
 
     private final BCryptPasswordEncoder passwordEncoder;
 
-    private final AuthenticationProvider authenticationProvider;
-
     private final JwtService jwtService;
 
     @Override
     @Transactional
     public DtoUser register(RegisterRequest request) {
         log.info("Kullanıcı kaydı başlatıldı: {}", request.getUsername());
-        // 1) Kimlik
+
         UserAuth auth = new UserAuth();
         auth.setUsername(request.getUsername());
         auth.setPassword(passwordEncoder.encode(request.getPassword()));
@@ -48,7 +46,6 @@ public class AuthServiceImpl implements AuthService {
 
         log.debug("UserAuth kaydedildi: {}", auth.getId());
 
-        // 2) Profil
         User profile = User.builder()
                            .firstName(request.getFirstName())
                            .lastName(request.getLastName())
@@ -59,8 +56,6 @@ public class AuthServiceImpl implements AuthService {
 
         log.info("Kullanıcı profili oluşturuldu: {}", profile.getEmail());
 
-
-        // 3) Geri dönüş DTO (parolayı asla dönme)
         DtoUser dto = new DtoUser();
         dto.setUsername(auth.getUsername());
         dto.setPassword(null);
