@@ -4,7 +4,7 @@ services:
     container_name: finalcasedocker-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: postgres
+      POSTGRES_DB: finalcase
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: ${DB_PASS}
     ports:

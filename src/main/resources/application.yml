@@ -3,7 +3,7 @@ server:
   port: ${PORT:8080}
 
 credit:
-  limit: ${CREDIT_LIMIT}
+  limit: 200
 
 app:
   jwt:
@@ -18,8 +18,8 @@ spring:
     name: finalcase
 
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
+    url: jdbc:postgresql://localhost:5432/finalcase
+    username: postgres
     password: ${DB_PASS}
     driver-class-name: org.postgresql.Driver
 
